@@ -1,0 +1,10 @@
+{"ts":"2026-09-19T12:41:07.312Z","level":"info","msg":"create receipt requested","service":"receipts-api","receiptId":"rcpt_9f12"}
+{"ts":"2026-09-19T12:41:07.498Z","level":"info","msg":"receipt saved","service":"receipts-api","receiptId":"rcpt_9f12"}
+{"ts":"2026-09-19T12:52:30.021Z","level":"info","msg":"create receipt requested","service":"receipts-api","receiptId":"rcpt_9f20"}
+{"ts":"2026-09-19T12:52:30.207Z","level":"info","msg":"receipt saved","service":"receipts-api","receiptId":"rcpt_9f20"}
+{"ts":"2026-09-19T13:04:02.110Z","level":"info","msg":"create receipt requested","service":"receipts-api","receiptId":"rcpt_9f31"}
+{"ts":"2026-09-19T13:04:02.448Z","level":"error","msg":"receipt request failed","service":"receipts-api","receiptId":"rcpt_9f31","status":500}
+{"ts":"2026-09-19T13:04:19.771Z","level":"info","msg":"create receipt requested","service":"receipts-api","receiptId":"rcpt_9f32"}
+{"ts":"2026-09-19T13:04:20.009Z","level":"error","msg":"receipt request failed","service":"receipts-api","receiptId":"rcpt_9f32","status":500}
+{"ts":"2026-09-19T13:11:43.880Z","level":"info","msg":"create receipt requested","service":"receipts-api","receiptId":"rcpt_9f40"}
+{"ts":"2026-09-19T13:11:44.203Z","level":"error","msg":"receipt request failed","service":"receipts-api","receiptId":"rcpt_9f40","status":500}

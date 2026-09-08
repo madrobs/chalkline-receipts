@@ -1,0 +1,11 @@
+{
+  "name": "receipts-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Drop-in day-pass receipts for Chalkline Athletics",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  }
+}
