@@ -22,8 +22,10 @@ describe("storeReceipt", () => {
   });
 
   it("hides storage failures", async () => {
+    let calls = 0;
     const storage = {
       put: async () => {
+        calls += 1;
         throw new Error("nope");
       },
     };
@@ -32,5 +34,23 @@ describe("storeReceipt", () => {
       () => storeReceipt({ storage, receipt: { id: "rcpt_test" } }),
       { message: "failed to save receipt" },
     );
+    assert.equal(calls, 1);
+  });
+
+  it("retries when storage is briefly unavailable", async () => {
+    let calls = 0;
+    const storage = {
+      put: async () => {
+        calls += 1;
+        if (calls < 3) {
+          const err = new Error("slow");
+          err.code = "Throttled";
+          throw err;
+        }
+      },
+    };
+
+    await storeReceipt({ storage, receipt: { id: "rcpt_test" } });
+    assert.equal(calls, 3);
   });
 });
