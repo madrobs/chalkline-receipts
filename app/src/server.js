@@ -28,6 +28,10 @@ function readBody(req) {
 }
 
 export async function createReceiptHandler(storage, body) {
+  if (!body?.id) {
+    return { status: 400, body: { error: "id is required" } };
+  }
+
   const receipt = {
     id: body.id,
     gym: "Chalkline Athletics",
