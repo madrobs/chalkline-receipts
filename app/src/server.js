@@ -55,6 +55,11 @@ export async function createReceiptHandler(storage, body) {
 
 export function createServer(storage) {
   return http.createServer(async (req, res) => {
+    if (req.method === "GET" && req.url === "/health") {
+      send(res, 200, { ok: true });
+      return;
+    }
+
     if (req.method === "POST" && req.url === "/receipts") {
       let body;
       try {
